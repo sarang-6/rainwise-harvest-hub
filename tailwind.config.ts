@@ -26,11 +26,13 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					soft: 'hsl(var(--primary-soft))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					soft: 'hsl(var(--secondary-soft))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -42,7 +44,8 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					soft: 'hsl(var(--accent-soft))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -63,6 +66,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'gradient-water': 'var(--gradient-water)',
+				'gradient-nature': 'var(--gradient-nature)',
+				'gradient-earth': 'var(--gradient-earth)',
+				'gradient-hero': 'var(--gradient-hero)'
+			},
+			boxShadow: {
+				'water': 'var(--shadow-water)',
+				'nature': 'var(--shadow-nature)',
+				'glow-water': 'var(--glow-water)'
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -70,25 +84,32 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'ripple': {
+					'0%': { transform: 'scale(0)', opacity: '1' },
+					'100%': { transform: 'scale(4)', opacity: '0' }
+				},
+				'flow': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100vw)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'ripple': 'ripple 2s ease-out infinite',
+				'flow': 'flow 8s linear infinite'
 			}
 		}
 	},
