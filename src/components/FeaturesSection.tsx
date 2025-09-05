@@ -101,7 +101,15 @@ const FeaturesSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
+          <Button 
+            variant="hero" 
+            size="lg"
+            onClick={() => {
+              document.getElementById('assessment')?.scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+          >
             Start Your Assessment
           </Button>
         </div>

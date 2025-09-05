@@ -44,7 +44,15 @@ const Header = () => {
                 ))}
               </select>
             </div>
-            <Button variant="hero" size="lg">
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => {
+                document.getElementById('assessment')?.scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+              }}
+            >
               Check Your Potential
             </Button>
           </div>
@@ -81,7 +89,14 @@ const Header = () => {
                     ))}
                   </select>
                 </div>
-                <Button variant="hero">
+                <Button 
+                  variant="hero"
+                  onClick={() => {
+                    document.getElementById('assessment')?.scrollIntoView({ 
+                      behavior: 'smooth' 
+                    });
+                  }}
+                >
                   Check Your Potential
                 </Button>
               </div>

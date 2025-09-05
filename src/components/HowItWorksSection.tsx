@@ -98,7 +98,15 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
+          <Button 
+            variant="hero" 
+            size="lg"
+            onClick={() => {
+              document.getElementById('assessment')?.scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+          >
             Start Assessment Now
           </Button>
         </div>
